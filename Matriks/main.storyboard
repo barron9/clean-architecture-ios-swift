@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4oN-sW-XiI">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17504.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--LoginViewController-->
+        <scene sceneID="bsf-CG-DcA">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="4oN-sW-XiI" userLabel="LoginViewController" customClass="LoginViewController" customModule="MatriksTrader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yhj-ck-AN8">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SJu-sF-d4I">
+                                <rect key="frame" x="16" y="165" width="358" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kullanıcı Adı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DmZ-dj-SwS">
+                                <rect key="frame" x="16" y="123" width="358" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rET-r9-cGP">
+                                <rect key="frame" x="164.66666666666666" y="220" width="61" height="30"/>
+                                <state key="normal" title="Giriş Yap"/>
+                                <connections>
+                                    <segue destination="vuT-EV-obD" kind="show" identifier="loginsegue" id="OtN-zY-wjU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trader'a Hoşgeldiniz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7oa-Mg-8hY">
+                                <rect key="frame" x="16" y="64" width="358" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="j7E-4W-fbt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IBk-Gh-uhh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DmZ-dj-SwS" firstAttribute="top" secondItem="7oa-Mg-8hY" secondAttribute="bottom" constant="38" id="5xY-DP-hhV"/>
+                            <constraint firstItem="SJu-sF-d4I" firstAttribute="centerX" secondItem="rET-r9-cGP" secondAttribute="centerX" id="CMl-C6-k7D"/>
+                            <constraint firstItem="DmZ-dj-SwS" firstAttribute="trailing" secondItem="SJu-sF-d4I" secondAttribute="trailing" id="LPz-DT-xWo"/>
+                            <constraint firstItem="7oa-Mg-8hY" firstAttribute="leading" secondItem="DmZ-dj-SwS" secondAttribute="leading" id="QBQ-Kz-N2n"/>
+                            <constraint firstItem="7oa-Mg-8hY" firstAttribute="top" secondItem="IBk-Gh-uhh" secondAttribute="top" constant="20" id="Ydg-EW-92w"/>
+                            <constraint firstItem="rET-r9-cGP" firstAttribute="top" secondItem="SJu-sF-d4I" secondAttribute="bottom" constant="21" id="hVP-QS-ncO"/>
+                            <constraint firstItem="7oa-Mg-8hY" firstAttribute="trailing" secondItem="DmZ-dj-SwS" secondAttribute="trailing" id="pGj-CY-paI"/>
+                            <constraint firstItem="7oa-Mg-8hY" firstAttribute="trailing" secondItem="Yhj-ck-AN8" secondAttribute="trailingMargin" id="rFo-qH-4Ix"/>
+                            <constraint firstItem="7oa-Mg-8hY" firstAttribute="leading" secondItem="Yhj-ck-AN8" secondAttribute="leadingMargin" id="sPa-gu-yUG"/>
+                            <constraint firstItem="SJu-sF-d4I" firstAttribute="top" secondItem="DmZ-dj-SwS" secondAttribute="bottom" constant="8" id="urG-X0-QAR"/>
+                            <constraint firstItem="DmZ-dj-SwS" firstAttribute="leading" secondItem="SJu-sF-d4I" secondAttribute="leading" id="xJc-pE-Wjw"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginbutton" destination="rET-r9-cGP" id="Wc2-Ra-HjI"/>
+                        <outlet property="password_text" destination="SJu-sF-d4I" id="uNv-Hv-vde"/>
+                        <outlet property="username_text" destination="DmZ-dj-SwS" id="8FP-7m-fUi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wqe-t5-w4U" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-326.25" y="52.5"/>
+        </scene>
+        <!--StocksViewController-->
+        <scene sceneID="Qvf-CT-a1u">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="vuT-EV-obD" userLabel="StocksViewController" customClass="StocksViewController" customModule="MatriksTrader" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bbv-Zw-8Fc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Portföyüm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azw-bZ-Gfs">
+                                <rect key="frame" x="16" y="71" width="124" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4b5-0J-268">
+                                <rect key="frame" x="16" y="108" width="358" height="626"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="44" id="wox-Nv-GTJ" customClass="StockCell" customModule="MatriksTrader" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="358" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wox-Nv-GTJ" id="mXg-bW-7fw">
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aum-vD-KlG">
+                                <rect key="frame" x="127" y="754" width="252" height="48"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Zgk-gI-3Bu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jdy-Nf-t0n"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="azw-bZ-Gfs" firstAttribute="top" secondItem="jdy-Nf-t0n" secondAttribute="top" constant="27" id="3Gj-gQ-ykA"/>
+                            <constraint firstItem="azw-bZ-Gfs" firstAttribute="leading" secondItem="Bbv-Zw-8Fc" secondAttribute="leadingMargin" id="8tt-W6-m1R"/>
+                            <constraint firstItem="aum-vD-KlG" firstAttribute="leading" secondItem="jdy-Nf-t0n" secondAttribute="leading" constant="127" id="EvV-EN-kDu"/>
+                            <constraint firstItem="jdy-Nf-t0n" firstAttribute="bottom" secondItem="aum-vD-KlG" secondAttribute="bottom" constant="8" id="FrG-1g-3q2"/>
+                            <constraint firstItem="4b5-0J-268" firstAttribute="trailing" secondItem="Bbv-Zw-8Fc" secondAttribute="trailingMargin" id="Rqd-nR-YrK"/>
+                            <constraint firstItem="azw-bZ-Gfs" firstAttribute="leading" secondItem="4b5-0J-268" secondAttribute="leading" id="b1w-Gd-ArX"/>
+                            <constraint firstItem="aum-vD-KlG" firstAttribute="top" secondItem="4b5-0J-268" secondAttribute="bottom" constant="20" id="by4-NC-Ker"/>
+                            <constraint firstItem="4b5-0J-268" firstAttribute="top" secondItem="azw-bZ-Gfs" secondAttribute="bottom" constant="8" id="evV-GI-HP8"/>
+                            <constraint firstItem="jdy-Nf-t0n" firstAttribute="trailing" secondItem="aum-vD-KlG" secondAttribute="trailing" constant="11" id="wZ1-YH-rU6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qJv-Mh-RrL"/>
+                    <connections>
+                        <outlet property="newbalance" destination="aum-vD-KlG" id="auW-RT-KII"/>
+                        <outlet property="stockstable_view" destination="4b5-0J-268" id="iCw-Xw-eWB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dIY-0R-FVk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="435" y="51.760563380281688"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
