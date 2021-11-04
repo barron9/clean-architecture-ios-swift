@@ -1,0 +1,27 @@
+PODS:
+  - ExternalProject (0.1.0)
+  - SwiftLint (0.45.0)
+  - Swinject (2.8.1)
+
+DEPENDENCIES:
+  - ExternalProject (from `ExternalProject/`)
+  - SwiftLint
+  - Swinject
+
+SPEC REPOS:
+  trunk:
+    - SwiftLint
+    - Swinject
+
+EXTERNAL SOURCES:
+  ExternalProject:
+    :path: ExternalProject/
+
+SPEC CHECKSUMS:
+  ExternalProject: 6d90e04ab79dc6fd5c137bbd04bd4c6ba3da6b39
+  SwiftLint: e5c7f1fba68eccfc51509d5b2ce1699f5502e0c7
+  Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
+
+PODFILE CHECKSUM: c358ccd4be53e4143be33e7f16a51a251bbb31e5
+
+COCOAPODS: 1.11.2

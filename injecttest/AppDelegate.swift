@@ -11,9 +11,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+//        _ = DIContainer.shared
+//
+//        var cache : CacheProtocol
+//
+//        cache = DIContainer.shared.resolve()
+//
+//        cache.pull(msg:"call from appdelegate")
+        
         return true
     }
 

@@ -1,0 +1,6 @@
+framework module ExternalProject {
+  umbrella header "ExternalProject-umbrella.h"
+
+  export *
+  module * { export * }
+}

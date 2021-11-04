@@ -1,0 +1,22 @@
+{
+  "name": "ExternalProject",
+  "version": "0.1.0",
+  "summary": "A short description of ExternalProject.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/barron9/ExternalProject",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "barron9": "barron9@yandex.com"
+  },
+  "source": {
+    "git": "https://github.com/barron9/ExternalProject.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "ExternalProject/Classes/**/*"
+}

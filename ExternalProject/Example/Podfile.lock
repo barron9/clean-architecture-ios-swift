@@ -1,0 +1,27 @@
+PODS:
+  - ExternalProject (0.1.0)
+  - Nimble (8.0.9)
+  - Quick (2.2.1)
+
+DEPENDENCIES:
+  - ExternalProject (from `../`)
+  - Nimble (~> 8.0.7)
+  - Quick (~> 2.2.0)
+
+SPEC REPOS:
+  trunk:
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  ExternalProject:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ExternalProject: 6d90e04ab79dc6fd5c137bbd04bd4c6ba3da6b39
+  Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
+  Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
+
+PODFILE CHECKSUM: 0d45fc632f95abfbb3325a555523220fe62b8aa0
+
+COCOAPODS: 1.11.2
