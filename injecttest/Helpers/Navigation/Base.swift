@@ -11,13 +11,13 @@ protocol Base{
     
     static var storyboardName: String { get }
     
-    static func initialize()->Self
+    static func instantiate()->Self
     
 }
 
 extension Base where Self : UIViewController  {
     
-    static func initialize()->Self {
+    static func instantiate()->Self {
         
         let fullName = NSStringFromClass(self)
         

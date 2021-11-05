@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class DummyCoordinator :NSObject, RootCoordinator {
-    let navigationController:UINavigationController
+    var navigationController: UINavigationController
     init(navigationController:UINavigationController){
         self.navigationController = navigationController
     }
@@ -18,8 +18,10 @@ class DummyCoordinator :NSObject, RootCoordinator {
         //instantiate viewcontroller
         //inject viewmodel into it
         //viewcontroller.coordinator = self
-        
+        let dvii = DummyViewController.instantiate()
         navigationController.delegate = self
+        navigationController.pushViewController(dvii, animated: true)
+        
     }
 }
 extension DummyCoordinator :UINavigationControllerDelegate {

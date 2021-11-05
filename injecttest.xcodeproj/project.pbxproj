@@ -21,6 +21,7 @@
 		840DCB8D272DDAFB00EED834 /* CacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DCB8C272DDAFB00EED834 /* CacheProtocol.swift */; };
 		840DCB90272DE57300EED834 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DCB8F272DE57300EED834 /* Networking.swift */; };
 		840DCB92272DE58F00EED834 /* NetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DCB91272DE58F00EED834 /* NetworkingProtocol.swift */; };
+		841CDBF62735DC4800C548F4 /* DummyIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CDBF52735DC4800C548F4 /* DummyIteractor.swift */; };
 		84357D1C272FF45F00C5AEEC /* Sequence+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84357D1B272FF45F00C5AEEC /* Sequence+Extension.swift */; };
 		84357D1E2731A83E00C5AEEC /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84357D1D2731A83E00C5AEEC /* NavigationController.swift */; };
 		84357D212731A94600C5AEEC /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84357D202731A94600C5AEEC /* Base.swift */; };
@@ -48,6 +49,7 @@
 		840DCB8C272DDAFB00EED834 /* CacheProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheProtocol.swift; sourceTree = "<group>"; };
 		840DCB8F272DE57300EED834 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		840DCB91272DE58F00EED834 /* NetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocol.swift; sourceTree = "<group>"; };
+		841CDBF52735DC4800C548F4 /* DummyIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyIteractor.swift; sourceTree = "<group>"; };
 		84357D1B272FF45F00C5AEEC /* Sequence+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Extension.swift"; sourceTree = "<group>"; };
 		84357D1D2731A83E00C5AEEC /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		84357D202731A94600C5AEEC /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				840DCB1F272DBF6100EED834 /* DummyViewController.swift */,
 				84357D222731B01700C5AEEC /* DummyViewModel.swift */,
 				84357D262731C36000C5AEEC /* DummyCoordinator.swift */,
+				841CDBF52735DC4800C548F4 /* DummyIteractor.swift */,
 			);
 			path = DummyScene;
 			sourceTree = "<group>";
@@ -274,7 +277,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 840DCB13272DBF6100EED834 /* Build configuration list for PBXProject "demo" */;
+			buildConfigurationList = 840DCB13272DBF6100EED834 /* Build configuration list for PBXProject "injecttest" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -358,6 +361,7 @@
 				840DCB20272DBF6100EED834 /* DummyViewController.swift in Sources */,
 				84357D2A2731C56600C5AEEC /* MainTabBar.swift in Sources */,
 				84357D1C272FF45F00C5AEEC /* Sequence+Extension.swift in Sources */,
+				841CDBF62735DC4800C548F4 /* DummyIteractor.swift in Sources */,
 				840DCB90272DE57300EED834 /* Networking.swift in Sources */,
 				840DCB35272DC2F100EED834 /* DIContainer.swift in Sources */,
 				84357D252731C34400C5AEEC /* RootCoordinator.swift in Sources */,
@@ -571,7 +575,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		840DCB13272DBF6100EED834 /* Build configuration list for PBXProject "demo" */ = {
+		840DCB13272DBF6100EED834 /* Build configuration list for PBXProject "injecttest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				840DCB2A272DBF6300EED834 /* Debug */,

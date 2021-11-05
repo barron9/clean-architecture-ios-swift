@@ -5,6 +5,8 @@
 //  Created by Berkin Tatlısu on 2.11.2021.
 //
 
-import Foundation
+import UIKit
 
-protocol RootCoordinator {}
+protocol RootCoordinator {
+    var navigationController:UINavigationController { get }
+}
