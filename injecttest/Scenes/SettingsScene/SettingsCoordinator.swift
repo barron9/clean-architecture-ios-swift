@@ -1,14 +1,14 @@
 //
-//  DummyCoordinator.swift
+//  SettingsCoordinator.swift
 //  injecttest
 //
-//  Created by Berkin Tatlısu on 2.11.2021.
+//  Created by Berkin Tatlısu on 6.11.2021.
 //
 
 import Foundation
 import UIKit
 
-class DummyCoordinator :NSObject, RootCoordinator {
+class SettingsCoordinator :NSObject, RootCoordinator {
     var navigationController: UINavigationController
     init(navigationController:UINavigationController){
         self.navigationController = navigationController
@@ -18,13 +18,13 @@ class DummyCoordinator :NSObject, RootCoordinator {
         //instantiate viewcontroller
         //inject viewmodel into it
         //viewcontroller.coordinator = self
-        let dvii = DummyViewController.instantiate()
+        let dvii = SettingsViewController.instantiate()
         navigationController.delegate = self
         navigationController.pushViewController(dvii, animated: true)
 
     }
 }
-extension DummyCoordinator :UINavigationControllerDelegate {
+extension SettingsCoordinator :UINavigationControllerDelegate {
     //fromviewcontroller
     //childedidfinish
     

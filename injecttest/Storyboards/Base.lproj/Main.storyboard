@@ -20,25 +20,28 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3S-Cn-Dp5">
                                 <rect key="frame" x="51" y="223.33333333333334" width="327" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="tamam"/>
+                                <buttonConfiguration key="configuration" style="filled" title="ileri"/>
+                                <connections>
+                                    <segue destination="rWI-bK-eSb" kind="push" id="3zJ-gZ-zQK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7u-nw-9pG">
                                 <rect key="frame" x="51" y="264.33333333333331" width="327" height="31"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="telefonuna bakıyım">
+                                <buttonConfiguration key="configuration" style="filled" title="yardım">
                                     <color key="baseBackgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Görüntülü görüşme için kodu giriniz:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Feq-Tf-AaK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sohbete başlamak için isim giriniz:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Feq-Tf-AaK">
                                 <rect key="frame" x="36" y="99" width="356" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="evet ne diyosa yapın." textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Dw0-el-Rlp">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Örnek İsim" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Dw0-el-Rlp">
                                 <rect key="frame" x="51" y="149.33333333333334" width="327" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" keyboardAppearance="alert" smartDashesType="no" textContentType="postal-code"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="alert" smartDashesType="no" textContentType="postal-code"/>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -62,6 +65,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="82.608695652173921" y="32.8125"/>
+        </scene>
+        <!--Sohbet-->
+        <scene sceneID="hXj-WA-Ufi">
+            <objects>
+                <viewController storyboardIdentifier="ChatViewController" id="rWI-bK-eSb" customClass="ChatViewController" customModule="injecttest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zDP-BM-DTa">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Htf-US-1MV">
+                                <rect key="frame" x="20" y="0.0" width="388" height="838"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="noN-JC-1p2">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="388" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="noN-JC-1p2" id="muQ-YQ-q8K">
+                                            <rect key="frame" x="0.0" y="0.0" width="388" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1Nx-46-3HY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Htf-US-1MV" firstAttribute="bottom" secondItem="1Nx-46-3HY" secondAttribute="bottom" id="9l3-DD-4sf"/>
+                            <constraint firstItem="Htf-US-1MV" firstAttribute="bottom" secondItem="1Nx-46-3HY" secondAttribute="bottom" id="Jvu-CC-fxW"/>
+                            <constraint firstItem="1Nx-46-3HY" firstAttribute="trailing" secondItem="Htf-US-1MV" secondAttribute="trailing" constant="20" id="RyB-RG-4Mo"/>
+                            <constraint firstItem="Htf-US-1MV" firstAttribute="top" secondItem="1Nx-46-3HY" secondAttribute="top" id="X7K-M7-jWi"/>
+                            <constraint firstItem="Htf-US-1MV" firstAttribute="leading" secondItem="1Nx-46-3HY" secondAttribute="leading" constant="20" id="eLy-UX-oEL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sohbet" leftItemsSupplementBackButton="YES" id="cAn-lc-dMZ">
+                        <barButtonItem key="backBarButtonItem" title="geri dön" style="plain" id="QgW-Hn-Pha"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="opu-WR-qlv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972.89719626168221" y="31.749460043196546"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="C6m-ax-TpZ">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="GAy-XK-Y92" customClass="SettingsViewController" customModule="injecttest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kw0-yT-Aql">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="settings placeholder" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAz-1A-8ZQ">
+                                <rect key="frame" x="20" y="104" width="388" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ekc-Va-z39"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ekc-Va-z39" firstAttribute="trailing" secondItem="aAz-1A-8ZQ" secondAttribute="trailing" constant="20" id="2Ox-zX-hm9"/>
+                            <constraint firstItem="aAz-1A-8ZQ" firstAttribute="leading" secondItem="Ekc-Va-z39" secondAttribute="leading" constant="20" id="L1z-5Z-SHk"/>
+                            <constraint firstItem="aAz-1A-8ZQ" firstAttribute="top" secondItem="Ekc-Va-z39" secondAttribute="top" constant="60" id="gJu-IN-1Vi"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Htl-HI-Uwi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1854.6728971962616" y="31.749460043196546"/>
         </scene>
     </scenes>
     <resources>

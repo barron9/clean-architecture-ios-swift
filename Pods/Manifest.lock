@@ -1,15 +1,18 @@
 PODS:
   - ExternalProject (0.1.0)
+  - Starscream (4.0.4)
   - SwiftLint (0.45.0)
   - Swinject (2.8.1)
 
 DEPENDENCIES:
   - ExternalProject (from `ExternalProject/`)
+  - Starscream (~> 4.0.4)
   - SwiftLint
   - Swinject
 
 SPEC REPOS:
   trunk:
+    - Starscream
     - SwiftLint
     - Swinject
 
@@ -19,9 +22,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   ExternalProject: 6d90e04ab79dc6fd5c137bbd04bd4c6ba3da6b39
+  Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   SwiftLint: e5c7f1fba68eccfc51509d5b2ce1699f5502e0c7
   Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
 
-PODFILE CHECKSUM: c358ccd4be53e4143be33e7f16a51a251bbb31e5
+PODFILE CHECKSUM: 48df469f72060cbb274313561b54f08ab60123fe
 
 COCOAPODS: 1.11.2

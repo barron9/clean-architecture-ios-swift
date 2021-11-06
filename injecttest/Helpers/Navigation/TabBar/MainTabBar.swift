@@ -11,12 +11,19 @@ import UIKit
 final class MainTabBar {
     class func build()->[RootCoordinator]{
      
-        let dummyController = createUINavigationControllerPer(title: "Test Süreci", image: UIImage(named: "portfolio")
+        let dummyController = createUINavigationControllerPer(title: "Sohbet", image: UIImage(named: "bubble")
         )
         let dummyCoordinator = DummyCoordinator(navigationController: dummyController)
         dummyCoordinator.start()
         
-        return [dummyCoordinator]
+        
+        let settingsConroller = createUINavigationControllerPer(title: "Ayarlar", image: UIImage(named: "gear")
+        )
+        let settingsCoordinator = SettingsCoordinator(navigationController: settingsConroller)
+        settingsCoordinator.start()
+        
+        
+        return [dummyCoordinator,settingsCoordinator]
         
     }
     

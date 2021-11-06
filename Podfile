@@ -6,6 +6,7 @@ target 'injecttest' do
   use_frameworks!
   pod 'Swinject'
   pod 'SwiftLint'
+  pod 'Starscream', '~> 4.0.4'
   pod 'ExternalProject', :path => 'ExternalProject/' 
 
   # Pods for injecttest

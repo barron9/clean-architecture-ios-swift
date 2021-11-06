@@ -22,6 +22,10 @@
 		840DCB90272DE57300EED834 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DCB8F272DE57300EED834 /* Networking.swift */; };
 		840DCB92272DE58F00EED834 /* NetworkingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840DCB91272DE58F00EED834 /* NetworkingProtocol.swift */; };
 		841CDBF62735DC4800C548F4 /* DummyIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841CDBF52735DC4800C548F4 /* DummyIteractor.swift */; };
+		841D8F1A2736A47A00F2DE40 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D8F192736A47A00F2DE40 /* ChatViewController.swift */; };
+		841D8F1C2736AED300F2DE40 /* EchoTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D8F1B2736AED300F2DE40 /* EchoTest.swift */; };
+		841D8F1F2736D84800F2DE40 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D8F1E2736D84800F2DE40 /* SettingsViewController.swift */; };
+		841D8F212736D94A00F2DE40 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D8F202736D94A00F2DE40 /* SettingsCoordinator.swift */; };
 		84357D1C272FF45F00C5AEEC /* Sequence+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84357D1B272FF45F00C5AEEC /* Sequence+Extension.swift */; };
 		84357D1E2731A83E00C5AEEC /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84357D1D2731A83E00C5AEEC /* NavigationController.swift */; };
 		84357D212731A94600C5AEEC /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84357D202731A94600C5AEEC /* Base.swift */; };
@@ -50,6 +54,10 @@
 		840DCB8F272DE57300EED834 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		840DCB91272DE58F00EED834 /* NetworkingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingProtocol.swift; sourceTree = "<group>"; };
 		841CDBF52735DC4800C548F4 /* DummyIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyIteractor.swift; sourceTree = "<group>"; };
+		841D8F192736A47A00F2DE40 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		841D8F1B2736AED300F2DE40 /* EchoTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EchoTest.swift; sourceTree = "<group>"; };
+		841D8F1E2736D84800F2DE40 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		841D8F202736D94A00F2DE40 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		84357D1B272FF45F00C5AEEC /* Sequence+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Extension.swift"; sourceTree = "<group>"; };
 		84357D1D2731A83E00C5AEEC /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		84357D202731A94600C5AEEC /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
@@ -147,6 +155,8 @@
 		840DCB33272DC2C100EED834 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				841D8F1D2736D83900F2DE40 /* SettingsScene */,
+				841D8F182736A46900F2DE40 /* ChatScene */,
 				840DCB36272DC30700EED834 /* DummyScene */,
 			);
 			path = Scenes;
@@ -195,6 +205,24 @@
 				84357D1F2731A92900C5AEEC /* Navigation */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		841D8F182736A46900F2DE40 /* ChatScene */ = {
+			isa = PBXGroup;
+			children = (
+				841D8F192736A47A00F2DE40 /* ChatViewController.swift */,
+				841D8F1B2736AED300F2DE40 /* EchoTest.swift */,
+			);
+			path = ChatScene;
+			sourceTree = "<group>";
+		};
+		841D8F1D2736D83900F2DE40 /* SettingsScene */ = {
+			isa = PBXGroup;
+			children = (
+				841D8F1E2736D84800F2DE40 /* SettingsViewController.swift */,
+				841D8F202736D94A00F2DE40 /* SettingsCoordinator.swift */,
+			);
+			path = SettingsScene;
 			sourceTree = "<group>";
 		};
 		84357D1A272FF44700C5AEEC /* Utils */ = {
@@ -359,6 +387,9 @@
 				84357D212731A94600C5AEEC /* Base.swift in Sources */,
 				84357D1E2731A83E00C5AEEC /* NavigationController.swift in Sources */,
 				840DCB20272DBF6100EED834 /* DummyViewController.swift in Sources */,
+				841D8F1F2736D84800F2DE40 /* SettingsViewController.swift in Sources */,
+				841D8F212736D94A00F2DE40 /* SettingsCoordinator.swift in Sources */,
+				841D8F1C2736AED300F2DE40 /* EchoTest.swift in Sources */,
 				84357D2A2731C56600C5AEEC /* MainTabBar.swift in Sources */,
 				84357D1C272FF45F00C5AEEC /* Sequence+Extension.swift in Sources */,
 				841CDBF62735DC4800C548F4 /* DummyIteractor.swift in Sources */,
@@ -372,6 +403,7 @@
 				840DCB92272DE58F00EED834 /* NetworkingProtocol.swift in Sources */,
 				84357D272731C36000C5AEEC /* DummyCoordinator.swift in Sources */,
 				840DCB8D272DDAFB00EED834 /* CacheProtocol.swift in Sources */,
+				841D8F1A2736A47A00F2DE40 /* ChatViewController.swift in Sources */,
 				840DCB41272DCAC000EED834 /* DummyAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

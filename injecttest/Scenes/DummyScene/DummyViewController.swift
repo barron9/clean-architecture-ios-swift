@@ -21,10 +21,7 @@ class DummyViewController: UIViewController, Base {
     
     override func viewDidAppear(_ animated: Bool) {
         dummyCache?.pull(msg:"call from ViewController")
-
     }
     
-
-
 }
 
