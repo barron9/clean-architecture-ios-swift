@@ -11,7 +11,7 @@ import Starscream
 class EchoTest :NSObject, WebSocketDelegate{
     public var kclas:NSObject?
     
-    let socket = WebSocket(request:URLRequest(url: URL(string: "ws://35.157.202.250:8765/")!) )
+    let socket = WebSocket(request:URLRequest(url: URL(string: "ws://localhost:8765/")!) )
     
     var status : ChatStatus
     
@@ -19,6 +19,7 @@ class EchoTest :NSObject, WebSocketDelegate{
         switch event {
             case .connected(let headers):
                 print("websocket is connected: \(headers)")
+                self.socket.write(string: "... test ...")
             case .disconnected(let reason, let code):
                 print("websocket is disconnected: \(reason) with code: \(code)")
             case .text(let string):
@@ -50,7 +51,6 @@ class EchoTest :NSObject, WebSocketDelegate{
         socket.request.timeoutInterval = 15
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2) {
             self.socket.connect()
-            self.socket.write(string: "... test ...")
         }
 
     }
