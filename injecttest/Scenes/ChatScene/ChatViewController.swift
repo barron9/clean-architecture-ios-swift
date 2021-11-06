@@ -10,12 +10,14 @@ import UIKit
 class ChatViewController: UIViewController,Base {
     static var storyboardName: String = "Main"
     
+    var client:EchoTest?
     
     override func viewDidLoad() {
         self.navigationController?.navigationBar.topItem?.backButtonTitle = "geri"
         self.tabBarController?.tabBar.isHidden = true
         
-        EchoTest().echoTest()
+        client = EchoTest()
+
     }
     override func viewWillAppear(_ animated: Bool) {
        
@@ -23,6 +25,7 @@ class ChatViewController: UIViewController,Base {
 
     override func viewWillDisappear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
-
+        client?.unload()
+        client = nil
     }
 }

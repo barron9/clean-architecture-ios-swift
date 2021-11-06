@@ -9,6 +9,11 @@ import Foundation
 import Starscream
 
 class EchoTest :NSObject, WebSocketDelegate{
+    public var kclas:NSObject?
+    
+    let socket = WebSocket(request:URLRequest(url: URL(string: "ws://35.157.202.250:8765/")!) )
+    
+    var status : ChatStatus
     
     func didReceive(event: WebSocketEvent, client: WebSocket) {
         switch event {
@@ -33,21 +38,28 @@ class EchoTest :NSObject, WebSocketDelegate{
             case .error(let error):
                 break
         }}
+    func unload(){
+        kclas = nil
+    }
     
     override init(){
+        self.status = .waiting
         super.init()
-        var request = URLRequest(url: URL(string: "ws://localhost:40510/")!)
-        request.timeoutInterval = 1
-        let socket = WebSocket(request:request )
+        self.kclas = self
         socket.delegate = self
-        socket.connect()
+        socket.request.timeoutInterval = 15
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2) {
-            socket.write(string: "... test ...", completion: nil)
+            self.socket.connect()
+            self.socket.write(string: "... test ...")
         }
 
     }
-    func echoTest(){
-        
+    deinit{
+        print("deinit")
     }
+    
 }
 
+enum ChatStatus {
+    case waiting,connected,disconnectd
+}
