@@ -19,7 +19,7 @@ class EchoTest :NSObject, WebSocketDelegate{
         switch event {
             case .connected(let headers):
                 print("websocket is connected: \(headers)")
-                self.socket.write(string: "... test ...")
+               // self.socket.write(string: "... test ...")
             case .disconnected(let reason, let code):
                 print("websocket is disconnected: \(reason) with code: \(code)")
             case .text(let string):

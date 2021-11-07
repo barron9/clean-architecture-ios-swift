@@ -27,7 +27,7 @@
 		841D8F1F2736D84800F2DE40 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D8F1E2736D84800F2DE40 /* SettingsViewController.swift */; };
 		841D8F212736D94A00F2DE40 /* SettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D8F202736D94A00F2DE40 /* SettingsCoordinator.swift */; };
 		841D8F2527371B9500F2DE40 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D8F2427371B9500F2DE40 /* TableCell.swift */; };
-		841D8F2727371DCC00F2DE40 /* ChatDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D8F2627371DCC00F2DE40 /* ChatDB.swift */; };
+		841D8F2727371DCC00F2DE40 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841D8F2627371DCC00F2DE40 /* ChatMessage.swift */; };
 		84357D1C272FF45F00C5AEEC /* Sequence+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84357D1B272FF45F00C5AEEC /* Sequence+Extension.swift */; };
 		84357D1E2731A83E00C5AEEC /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84357D1D2731A83E00C5AEEC /* NavigationController.swift */; };
 		84357D212731A94600C5AEEC /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84357D202731A94600C5AEEC /* Base.swift */; };
@@ -61,7 +61,8 @@
 		841D8F1E2736D84800F2DE40 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		841D8F202736D94A00F2DE40 /* SettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.swift; sourceTree = "<group>"; };
 		841D8F2427371B9500F2DE40 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
-		841D8F2627371DCC00F2DE40 /* ChatDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDB.swift; sourceTree = "<group>"; };
+		841D8F2627371DCC00F2DE40 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		841D8F292737B5D300F2DE40 /* ws.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = ws.js; sourceTree = "<group>"; };
 		84357D1B272FF45F00C5AEEC /* Sequence+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sequence+Extension.swift"; sourceTree = "<group>"; };
 		84357D1D2731A83E00C5AEEC /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		84357D202731A94600C5AEEC /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 				840DCB39272DC88F00EED834 /* Podfile */,
 				840DCB1A272DBF6100EED834 /* injecttest */,
 				840DCB19272DBF6100EED834 /* Products */,
+				841D8F282737B5B400F2DE40 /* server */,
 				89228D31018966DD357B6288 /* Pods */,
 				C133615DAA119C99AD58F3C7 /* Frameworks */,
 			);
@@ -191,7 +193,7 @@
 		840DCB38272DC36C00EED834 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				841D8F2627371DCC00F2DE40 /* ChatDB.swift */,
+				841D8F2627371DCC00F2DE40 /* ChatMessage.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -229,6 +231,14 @@
 				841D8F202736D94A00F2DE40 /* SettingsCoordinator.swift */,
 			);
 			path = SettingsScene;
+			sourceTree = "<group>";
+		};
+		841D8F282737B5B400F2DE40 /* server */ = {
+			isa = PBXGroup;
+			children = (
+				841D8F292737B5D300F2DE40 /* ws.js */,
+			);
+			path = server;
 			sourceTree = "<group>";
 		};
 		84357D1A272FF44700C5AEEC /* Utils */ = {
@@ -411,7 +421,7 @@
 				841D8F2527371B9500F2DE40 /* TableCell.swift in Sources */,
 				840DCB8D272DDAFB00EED834 /* CacheProtocol.swift in Sources */,
 				841D8F1A2736A47A00F2DE40 /* ChatViewController.swift in Sources */,
-				841D8F2727371DCC00F2DE40 /* ChatDB.swift in Sources */,
+				841D8F2727371DCC00F2DE40 /* ChatMessage.swift in Sources */,
 				840DCB41272DCAC000EED834 /* DummyAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

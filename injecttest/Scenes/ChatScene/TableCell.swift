@@ -11,5 +11,5 @@ import UIKit
 class TableCell:UITableViewCell{
     @IBOutlet weak var from: UILabel!
     @IBOutlet weak var message: UILabel!
-    var datetime:String = ""
+    var datetime:String = ""    
 }

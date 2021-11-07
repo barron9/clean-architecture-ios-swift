@@ -74,15 +74,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Htf-US-1MV">
-                                <rect key="frame" x="20" y="66" width="388" height="682"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Htf-US-1MV">
+                                <rect key="frame" x="0.0" y="66" width="428" height="682"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tablecell" id="noN-JC-1p2" customClass="TableCell" customModule="injecttest" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="388" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="noN-JC-1p2" id="muQ-YQ-q8K">
-                                            <rect key="frame" x="0.0" y="0.0" width="388" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="message:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMI-t9-Vne">
@@ -117,6 +117,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type message..." adjustsFontForContentSizeCategory="YES" minimumFontSize="15" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="czh-Gx-j76">
+                                <rect key="frame" x="262" y="756" width="146" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sll-ot-6Wl">
+                                <rect key="frame" x="352.33333333333331" y="798" width="55.666666666666686" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="send"/>
+                                <connections>
+                                    <action selector="sendbtn:" destination="rWI-bK-eSb" eventType="touchUpInside" id="yAH-R3-qpY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1Nx-46-3HY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -124,14 +137,19 @@
                             <constraint firstItem="1Nx-46-3HY" firstAttribute="bottom" secondItem="1Er-Yk-nGg" secondAttribute="bottom" constant="46" id="1QT-br-BVD"/>
                             <constraint firstItem="1Er-Yk-nGg" firstAttribute="top" secondItem="Htf-US-1MV" secondAttribute="bottom" constant="8" id="638-Wh-krj"/>
                             <constraint firstItem="1Nx-46-3HY" firstAttribute="trailing" secondItem="1Er-Yk-nGg" secondAttribute="trailing" constant="186" id="9YL-7c-7Cq"/>
-                            <constraint firstItem="1Nx-46-3HY" firstAttribute="trailing" secondItem="Htf-US-1MV" secondAttribute="trailing" constant="20" id="DP9-uL-cbc"/>
+                            <constraint firstItem="czh-Gx-j76" firstAttribute="top" secondItem="Htf-US-1MV" secondAttribute="bottom" constant="8" id="A2b-Eg-Lxt"/>
+                            <constraint firstItem="1Nx-46-3HY" firstAttribute="trailing" secondItem="Htf-US-1MV" secondAttribute="trailing" id="DP9-uL-cbc"/>
+                            <constraint firstItem="sll-ot-6Wl" firstAttribute="top" secondItem="czh-Gx-j76" secondAttribute="bottom" constant="8" id="GSF-ex-Vly"/>
                             <constraint firstItem="DyF-cf-fj2" firstAttribute="leading" secondItem="1Nx-46-3HY" secondAttribute="leading" constant="35" id="I2P-8m-d1t"/>
                             <constraint firstItem="DyF-cf-fj2" firstAttribute="top" secondItem="Htf-US-1MV" secondAttribute="bottom" constant="16" id="RdB-HJ-XCM"/>
                             <constraint firstItem="1Er-Yk-nGg" firstAttribute="leading" secondItem="1Nx-46-3HY" secondAttribute="leading" constant="187" id="Wi7-8C-fck"/>
+                            <constraint firstItem="czh-Gx-j76" firstAttribute="leading" secondItem="1Er-Yk-nGg" secondAttribute="trailing" constant="20" id="YXr-Ij-bQy"/>
                             <constraint firstItem="1Nx-46-3HY" firstAttribute="bottom" secondItem="Htf-US-1MV" secondAttribute="bottom" constant="90" id="cJu-T8-gyW"/>
-                            <constraint firstItem="Htf-US-1MV" firstAttribute="leading" secondItem="1Nx-46-3HY" secondAttribute="leading" constant="20" id="mw4-Wd-oR6"/>
+                            <constraint firstItem="Htf-US-1MV" firstAttribute="leading" secondItem="1Nx-46-3HY" secondAttribute="leading" id="mw4-Wd-oR6"/>
                             <constraint firstItem="1Er-Yk-nGg" firstAttribute="leading" secondItem="DyF-cf-fj2" secondAttribute="trailing" constant="8" id="p1N-wf-b3m"/>
                             <constraint firstItem="Htf-US-1MV" firstAttribute="top" secondItem="zDP-BM-DTa" secondAttribute="top" constant="66" id="qav-GF-mLi"/>
+                            <constraint firstItem="1Nx-46-3HY" firstAttribute="trailing" secondItem="czh-Gx-j76" secondAttribute="trailing" constant="20" id="vh6-Rd-Y1A"/>
+                            <constraint firstItem="1Nx-46-3HY" firstAttribute="trailing" secondItem="sll-ot-6Wl" secondAttribute="trailing" constant="20" id="w1g-MK-Zn0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sohbet" leftItemsSupplementBackButton="YES" id="cAn-lc-dMZ">
@@ -139,7 +157,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="activity" destination="1Er-Yk-nGg" id="idR-0o-uMk"/>
+                        <outlet property="msgarea" destination="czh-Gx-j76" id="rro-1M-UOp"/>
                         <outlet property="rcv" destination="DyF-cf-fj2" id="TwO-O3-Pdu"/>
+                        <outlet property="sendbtn" destination="sll-ot-6Wl" id="CkO-i9-RbO"/>
                         <outlet property="tablevie" destination="Htf-US-1MV" id="8hY-Gq-ZGi"/>
                     </connections>
                 </viewController>

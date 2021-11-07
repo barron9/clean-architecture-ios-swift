@@ -16,14 +16,12 @@ class ChatViewController: UIViewController,Base {
     @IBOutlet var rcv: UILabel!
     @IBOutlet weak var tablevie: UITableView!
     
+    @IBOutlet var msgarea: UITextField!
+    @IBOutlet var sendbtn: UIButton!
+    
     var client:EchoTest?
     
-    var data = [
-        ChatMessage(message: "msg1",from: "tester",datetime: "2021"),
-        ChatMessage(message: "msg2",from: "tester",datetime: "2021"),
-        ChatMessage(message: "msg3",from: "tester",datetime: "2021"),
-        ChatMessage(message: "msg4",from: "tester",datetime: "2021"),
-    ]
+    var data :[ChatMessage] = []
     override func viewDidLoad() {
         self.navigationController?.navigationBar.topItem?.backButtonTitle = "geri"
         self.tabBarController?.tabBar.isHidden = true
@@ -33,18 +31,49 @@ class ChatViewController: UIViewController,Base {
         tablevie.delegate = self
         tablevie.dataSource = self
     
-        
- 
+        sendbtn = UIButton()
     }
+    
+    @IBAction func sendbtn(_ sender: Any) {
+        client?.socket.write(string: msgarea.text!)
+        msgarea.text = ""
+    }
+  
+    
     override func viewWillAppear(_ animated: Bool) {
        
     }
     
     func onevent(s:WebSocketEvent?){
+        switch s{
+        case .text(let s):
+            data.append(ChatMessage(message: s,from: "auto", datetime: String(Date().timeIntervalSince1970)))
+            break
+        case .none:
+            break
+        case .some(.connected(_)):
+            break
+        case .some(.disconnected(_, _)):
+            break
+        case .some(.binary(_)):
+            break
+        case .some(.pong(_)):
+            break
+        case .some(.ping(_)):
+            break
+        case .some(.error(_)):
+            break
+        case .some(.viabilityChanged(_)):
+            break
+        case .some(.reconnectSuggested(_)):
+            break
+        case .some(.cancelled):
+            break
+        }
         activity.isHidden = true
         print(s.debugDescription)
         rcv.text = " Received : \(s.debugDescription)"
-        data.append(ChatMessage(message: s.debugDescription,from: "auto", datetime: "nil"))
+        
         tablevie.reloadData()
         if (data.count > 20){
             
@@ -75,7 +104,6 @@ extension ChatViewController :UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "tablecell", for: indexPath) as! TableCell
-        
         cell.message?.text = data[indexPath.row].message
         cell.from?.text = data[indexPath.row].from
         cell.datetime = data[indexPath.row].datetime
