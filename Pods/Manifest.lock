@@ -1,17 +1,28 @@
 PODS:
   - ExternalProject (0.1.0)
+  - RxCocoa (6.2.0):
+    - RxRelay (= 6.2.0)
+    - RxSwift (= 6.2.0)
+  - RxRelay (6.2.0):
+    - RxSwift (= 6.2.0)
+  - RxSwift (6.2.0)
   - Starscream (4.0.4)
   - SwiftLint (0.45.0)
   - Swinject (2.8.1)
 
 DEPENDENCIES:
   - ExternalProject (from `ExternalProject/`)
+  - RxCocoa (= 6.2.0)
+  - RxSwift (= 6.2.0)
   - Starscream (~> 4.0.4)
   - SwiftLint
   - Swinject
 
 SPEC REPOS:
   trunk:
+    - RxCocoa
+    - RxRelay
+    - RxSwift
     - Starscream
     - SwiftLint
     - Swinject
@@ -22,10 +33,13 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   ExternalProject: 6d90e04ab79dc6fd5c137bbd04bd4c6ba3da6b39
+  RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
+  RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
+  RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
   Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   SwiftLint: e5c7f1fba68eccfc51509d5b2ce1699f5502e0c7
   Swinject: 97112918bd7e0785dc2df7036213f3c8cbba6586
 
-PODFILE CHECKSUM: 48df469f72060cbb274313561b54f08ab60123fe
+PODFILE CHECKSUM: 096bd89e1df17e76a8044a11b5fec14f39ad8cef
 
 COCOAPODS: 1.11.2

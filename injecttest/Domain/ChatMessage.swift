@@ -12,4 +12,7 @@ struct ChatMessage{
     var from:String
     var datetime:String
     
+    func toString()->String{
+        return message + from + datetime
+    }
 }

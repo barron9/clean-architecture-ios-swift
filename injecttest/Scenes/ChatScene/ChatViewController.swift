@@ -7,13 +7,14 @@
 
 import UIKit
 import Starscream
+import RxCocoa
+import RxSwift
 
 class ChatViewController: UIViewController,Base {
     
     static var storyboardName: String = "Main"
     
     @IBOutlet var activity: UIActivityIndicatorView!
-    @IBOutlet var rcv: UILabel!
     @IBOutlet weak var tablevie: UITableView!
     
     @IBOutlet var msgarea: UITextField!
@@ -25,23 +26,33 @@ class ChatViewController: UIViewController,Base {
     override func viewDidLoad() {
         self.navigationController?.navigationBar.topItem?.backButtonTitle = "geri"
         self.tabBarController?.tabBar.isHidden = true
-        client = EchoTest()
+        client = EchoTest(room:31312)
         client?.socket.onEvent = onevent
         
         tablevie.delegate = self
         tablevie.dataSource = self
-    
+        
         sendbtn = UIButton()
+        
+        setupBindings()
     }
     
+    func setupBindings(){
+        
+        msgarea.rx.text.subscribe{
+            e in
+            print(e.event.element?.debugDescription)
+        }
+    }
     @IBAction func sendbtn(_ sender: Any) {
-        client?.socket.write(string: msgarea.text!)
+        guard let msg = msgarea.text , msgarea.text?.isEmpty != true else { return }
+        client?.socket.write(string: msg)
         msgarea.text = ""
     }
-  
+    
     
     override func viewWillAppear(_ animated: Bool) {
-       
+        
     }
     
     func onevent(s:WebSocketEvent?){
@@ -72,14 +83,13 @@ class ChatViewController: UIViewController,Base {
         }
         activity.isHidden = true
         print(s.debugDescription)
-        rcv.text = " Received : \(s.debugDescription)"
         
         tablevie.reloadData()
         if (data.count > 20){
             
         }
     }
-
+    
     override func viewWillDisappear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
         client?.unload()
@@ -91,6 +101,12 @@ class ChatViewController: UIViewController,Base {
 extension ChatViewController :UITableViewDelegate {
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let c = UIAlertController(title: "info", message: data[indexPath.row].toString() , preferredStyle: UIAlertController.Style.actionSheet)
+        let a = UIAlertAction(title: "ok", style: UIAlertAction.Style.cancel, handler: nil)
+        c.addAction(a)
+        self.present(c, animated: true, completion: nil)
     }
 }
 
