@@ -40,16 +40,17 @@ class EchoTest :NSObject, WebSocketDelegate{
             break
         }}
     func unload(){
+        socket.forceDisconnect()
         kclas = nil
     }
     
-    init(room:Int){
+    init(room:String){
         self.status = .waiting
         super.init()
         self.kclas = self
         socket.delegate = self
         socket.request.timeoutInterval = 15
-        socket.request.addValue(String(room), forHTTPHeaderField: "room")
+        socket.request.addValue(room, forHTTPHeaderField: "room")
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2) {
             self.socket.connect()
         }

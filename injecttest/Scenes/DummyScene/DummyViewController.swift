@@ -16,6 +16,10 @@ class DummyViewController: UIViewController, Base {
     
     @IBOutlet var collection: UICollectionView!
     
+    @IBOutlet weak var roonnumber: UITextField!
+    @IBAction func nexttochat(_ sender: Any) {
+        ChatViewController.roomNo = roonnumber.text!
+    }
     var data: [Tag] = [
         Tag(name: "#NFT"),
         Tag(name: "#meta"),

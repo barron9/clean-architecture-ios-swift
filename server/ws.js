@@ -22,22 +22,42 @@ var wss = new WebSocketServer({
     // should not be compressed if context takeover is disabled.
   }
 });
+const users_cache = new Map();
 
-wss.on('connection', function (ws) {
+wss.on('connection', function (ws, req, client) {
+  
+  var clientID = ws._socket._handle.fd;
+  
+  ws.id = clientID
+
+  console.log(client + ", joined to room " + req.headers.room);
+
+  users_cache.set(clientID, req.headers.room)
+  console.log(users_cache)
   ws.on('message', function (message) {
     console.log('received: %s', message)
-    var clientID = ws._socket._handle.fd;
+  
     wss.clients.forEach(function (client) {
-      client.send("guest" + clientID + " : " + message.toString());
+      users_cache.forEach(function (value, key) {
+          if(users_cache.get(ws.id) === value && users_cache.get(client.id) === value && client.id === key) /* room check */{
+            client.send("guest" + ws.id + " : " + message.toString());
+          }
+      })
+
     });
   })
-  var clientID = ws._socket._handle.fd;
 
   wss.clients.forEach(function (client) {
-    client.send("new user joined guest" + clientID);
+    users_cache.forEach(function (value, key) {
+        if(users_cache.get(client.id) === value && client.id != key) /* room check */{
+          client.send("guest" + client.id + " joined room.");
+        }
+    })
+
   });
   /* setInterval(
     () => ws.send(`${new Date()}`),
     1000
   ) */
 })
+

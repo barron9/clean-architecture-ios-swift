@@ -23,6 +23,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="ileri"/>
                                 <connections>
+                                    <action selector="nexttochat:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P5B-WT-aoI"/>
                                     <segue destination="rWI-bK-eSb" kind="show" identifier="chatsegue" id="3zJ-gZ-zQK"/>
                                 </connections>
                             </button>
@@ -121,6 +122,7 @@
                     </view>
                     <connections>
                         <outlet property="collection" destination="VSd-G5-E7j" id="vWI-Aw-ApI"/>
+                        <outlet property="roonnumber" destination="Dw0-el-Rlp" id="hfz-hP-8jP"/>
                         <outlet property="selectRoom" destination="Dw0-el-Rlp" id="VfS-Mh-m6t"/>
                     </connections>
                 </viewController>

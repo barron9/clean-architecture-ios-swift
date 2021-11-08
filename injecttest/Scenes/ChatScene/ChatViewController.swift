@@ -14,6 +14,8 @@ class ChatViewController: UIViewController,Base {
     
     static var storyboardName: String = "Main"
     
+    static var roomNo: String = ""
+    
     @IBOutlet var activity: UIActivityIndicatorView!
     @IBOutlet weak var tablevie: UITableView!
     
@@ -26,7 +28,8 @@ class ChatViewController: UIViewController,Base {
     override func viewDidLoad() {
         self.navigationController?.navigationBar.topItem?.backButtonTitle = "geri"
         self.tabBarController?.tabBar.isHidden = true
-        client = EchoTest(room:31312)
+        
+        client = EchoTest(room: ChatViewController.roomNo )
         client?.socket.onEvent = onevent
         
         tablevie.delegate = self
@@ -50,10 +53,6 @@ class ChatViewController: UIViewController,Base {
         msgarea.text = ""
     }
     
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-    }
     
     func onevent(s:WebSocketEvent?){
         switch s{
