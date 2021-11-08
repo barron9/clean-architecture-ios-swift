@@ -160,7 +160,7 @@
                                                     <rect key="frame" x="20" y="5" width="180" height="14"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -213,6 +213,7 @@
                         <outlet property="activity" destination="1Er-Yk-nGg" id="idR-0o-uMk"/>
                         <outlet property="msgarea" destination="czh-Gx-j76" id="rro-1M-UOp"/>
                         <outlet property="sendbtn" destination="sll-ot-6Wl" id="CkO-i9-RbO"/>
+                        <outlet property="sohbetTitle" destination="cAn-lc-dMZ" id="gE6-lS-hup"/>
                         <outlet property="tablevie" destination="Htf-US-1MV" id="8hY-Gq-ZGi"/>
                     </connections>
                 </viewController>

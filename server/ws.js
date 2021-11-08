@@ -49,8 +49,8 @@ wss.on('connection', function (ws, req, client) {
 
   wss.clients.forEach(function (client) {
     users_cache.forEach(function (value, key) {
-        if(users_cache.get(client.id) === value && client.id != key) /* room check */{
-          client.send("guest" + client.id + " joined room.");
+        if(users_cache.get(ws.id) === value && users_cache.get(client.id) === value && client.id === key) /* room check */{
+          client.send("guest" + ws.id + " joined room.");
         }
     })
 

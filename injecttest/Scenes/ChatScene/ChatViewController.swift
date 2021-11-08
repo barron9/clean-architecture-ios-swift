@@ -14,6 +14,7 @@ class ChatViewController: UIViewController,Base {
     
     static var storyboardName: String = "Main"
     
+    @IBOutlet weak var sohbetTitle: UINavigationItem!
     static var roomNo: String = ""
     
     @IBOutlet var activity: UIActivityIndicatorView!
@@ -26,9 +27,9 @@ class ChatViewController: UIViewController,Base {
     
     var data :[ChatMessage] = []
     override func viewDidLoad() {
-        self.navigationController?.navigationBar.topItem?.backButtonTitle = "geri"
+        self.navigationController?.navigationBar.topItem?.backButtonTitle = " "
         self.tabBarController?.tabBar.isHidden = true
-        
+        sohbetTitle.title = ChatViewController.roomNo
         client = EchoTest(room: ChatViewController.roomNo )
         client?.socket.onEvent = onevent
         
@@ -57,7 +58,11 @@ class ChatViewController: UIViewController,Base {
     func onevent(s:WebSocketEvent?){
         switch s{
         case .text(let s):
-            data.append(ChatMessage(message: s,from: "auto", datetime: String(Date().timeIntervalSince1970)))
+            if(s.contains(":")){
+                data.append(ChatMessage(message: String(s.split(separator: ":")[1]),from: String(s.split(separator: ":")[0]), datetime: String(Date().timeIntervalSince1970)))
+            }else{
+                data.append(ChatMessage(message: s,from: "info", datetime: String(Date().timeIntervalSince1970)))
+            }
             break
         case .none:
             break
